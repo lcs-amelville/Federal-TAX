@@ -42,8 +42,8 @@ class ViewController: UIViewController {
         let firstTaxBracketTotal = 7_144.0
         let secondTaxBracketTotal = 9_763.0 + 7_144.0
         let thirdTaxBracketTotal = 13_626.0 + secondTaxBracketTotal
-        let fourthTaxBracketTotal =
-        let fifthTaxBracketTotal =
+        let fourthTaxBracketTotal = 18_183 + thirdTaxBracketTotal
+       
         
         
         switch totalIncome {
@@ -76,9 +76,9 @@ class ViewController: UIViewController {
             let fifthTaxBracket = Double(totalIncome - 210_371) * 0.33
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
-            moneyLostLabel.text =
+            moneyLostLabel.text
             
-        }
+    }
         
     }
     
