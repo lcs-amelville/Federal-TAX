@@ -51,32 +51,32 @@ class ViewController: UIViewController {
             let firstTaxBracket = totalIncome * 0.15
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
-            moneyLostLabel.text
+            moneyLostLabel.text = String(firstTaxBracket)
             
         case 47631...95_259:
             let secondTaxBracket = (totalIncome - 47630) * 0.205
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
-            moneyLostLabel.text
+            moneyLostLabel.text = String(secondTaxBracket + firstTaxBracketTotal)
             
         case 95_260...147_667:
             let thirdTaxBracket = Double(totalIncome - 95_259.0) * 0.26
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
-            moneyLostLabel.text 
+            moneyLostLabel.text = String(thirdTaxBracket + secondTaxBracketTotal)
             
         case 147_668...210_371:
-            let fourthTaxBracket = Double(totalIncome - 147_667) * 0.29
+            let fourthTaxBracket = (totalIncome - 147_667) * 0.29
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
-            
+            moneyLostLabel.text = String(fourthTaxBracket + thirdTaxBracketTotal)
             
         default:
             
             let fifthTaxBracket = Double(totalIncome - 210_371) * 0.33
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
-            moneyLostLabel.text
+            moneyLostLabel.text = String( fifthTaxBracket + fourthTaxBracketTotal)
             
     }
         
