@@ -53,32 +53,32 @@ class ViewController: UIViewController {
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
             moneyLostLabel.text = String(firstTaxBracket)
-             totalPercentLost.text = String(totalIncome/firstTaxBracket )
+             totalPercentLost.text = String(firstTaxBracket/totalIncome * 100)
         case 47631...95_259:
             let secondTaxBracket = (totalIncome - 47630) * 0.205
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
             moneyLostLabel.text = String(secondTaxBracket + firstTaxBracketTotal)
-             totalPercentLost.text = String(totalIncome/(secondTaxBracket + firstTaxBracketTotal))
+             totalPercentLost.text = String((secondTaxBracket + firstTaxBracketTotal)/totalIncome * 100)
         case 95_260...147_667:
             let thirdTaxBracket = Double(totalIncome - 95_259.0) * 0.26
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
             moneyLostLabel.text = String(thirdTaxBracket + secondTaxBracketTotal)
-             totalPercentLost.text = String(totalIncome/(thirdTaxBracket + secondTaxBracketTotal))
+             totalPercentLost.text = String((thirdTaxBracket + secondTaxBracketTotal)/totalIncome * 100)
         case 147_668...210_371:
             let fourthTaxBracket = (totalIncome - 147_667) * 0.29
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
             moneyLostLabel.text = String(fourthTaxBracket + thirdTaxBracketTotal)
-             totalPercentLost.text = String(totalIncome/(fourthTaxBracket + thirdTaxBracketTotal))
+             totalPercentLost.text = String((fourthTaxBracket + thirdTaxBracketTotal)/totalIncome * 100)
         default:
             
             let fifthTaxBracket = Double(totalIncome - 210_371) * 0.33
             nameLabel.text = nameOfPersonAsString
             totalTaxPercentLabel.text = "Your Total Tax money lost is"
             moneyLostLabel.text = String( fifthTaxBracket + fourthTaxBracketTotal)
-            totalPercentLost.text = String(totalIncome/(fifthTaxBracket + fourthTaxBracketTotal))
+            totalPercentLost.text = String((fifthTaxBracket + fourthTaxBracketTotal)/totalIncome * 100)
     }
         
     }
